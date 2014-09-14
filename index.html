@@ -12,21 +12,31 @@
 
 	<!-- define angular controller -->
 	<body ng-controller="CaliforniaController as cali">
-		<div class="navbar navbar-default" role="navigation">
-        	<div class="container-fluid">
-        		<div class="navbar-header">
-	      	  		<a class="navbar-brand" href="#">Awdventures.CA</a>
-        	  	</div>
-				<div class="btn-group" ng-class='{open: open}' ng-repeat='city in cities'>
-					<button class="btn">{{city}}</button>
-					<a href="#" class="btn dropdown-toggle" data-toggle="dropdown" ng-click='open=!open'><span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-					</ul>
+		<nav class="navbar navbar-default" role="navigation">
+		  	<div class="container-fluid">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		       			<span class="sr-only">Toggle navigation</span>
+		       		 	<span class="icon-bar"></span>
+		       		 	<span class="icon-bar"></span>
+		       		 	<span class="icon-bar"></span>
+		      		</button>
+		      		<a class="navbar-brand" href="#">Awdventures.CA</a>
+		    	</div>
+		
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse">
+			      	<ul class="nav navbar-nav" ng-repeat="city in cities">
+			        	<li><a ng-href={{city}}>{{city}}</a></li>
+			    	</ul>
+					<ul class="nav navbar-nav navbar-right">
+	        			<li><a href="#">Contact</a></li>
+	        		</ul>
 				</div>
-		</div>
+
+		  	</div>
+		</nav>
 	</body>
 	
 	<!-- Main content and injected views -->

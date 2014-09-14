@@ -2,7 +2,7 @@
 	var app = angular.module('california', []);
 
 	app.controller('CaliforniaController', function($scope) {
-		$scope.cities = ["Fremont", "San Jose"]
+		$scope.cities = ["Fremont", "San Jose", "Berkeley", "San Francisco"]
 		$scope.places = [
 			{"name": "Mission Peak",
 				"city": "Fremont",
