@@ -22,3 +22,6 @@ app.controller('PlacesCtrl', function($scope, $routeParams) {
 	];
 
 });
+
+app.controller('ContactCtrl', function($scope) {
+});
