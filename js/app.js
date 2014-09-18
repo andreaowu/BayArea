@@ -21,8 +21,3 @@ app.config(function($routeProvider) {
 			redirectTo : '/'
 		});
 });
-
-app.service("storeVar", function() {
-	this.chosen = "";
-	alert("this is chosen: " + chosen);
-});

@@ -1,4 +1,6 @@
-app.controller('PlacesCtrl', function($scope, 'storeVar') {
+app.controller('PlacesCtrl', ['$rootScope', '$scope', function($scope, $rootScope) {
+	$rootScope.chosen = "";
+
 	$scope.cities = 
 		{"Fremont": ["food", "hiking"],
 			"San Jose": ["food", "hiking"], 
@@ -22,15 +24,15 @@ app.controller('PlacesCtrl', function($scope, 'storeVar') {
 	];
 
 	$scope.changeChosen = function(changeTo) {
-		storeVar.chosen = changeTo;
+		$rootScope.chosen = changeTo;
 		alert(changeTo);
 	};
 
 	$scope.get = function() {
-		alert(storeVar.chosen + " get is the new view one");
+		alert($rootScope.chosen + " get is the new view one");
 	};
 
-});
+}]);
 
 app.controller('ContactCtrl', function($scope) {
 });
