@@ -1,6 +1,4 @@
-
-
-app.controller('CaliforniaController', function($scope) {
+app.controller('PlacesCtrl', function($scope, $routeParams) {
 	$scope.cities = 
 		{"Fremont": ["food", "hiking"],
 			"San Jose": ["food", "hiking"], 
@@ -22,4 +20,5 @@ app.controller('CaliforniaController', function($scope) {
 			"description": "This place got me to start eating falafels; it's that good! Get the falafel and banana milk shake. It's great!",
 			"img": "tbd"}
 	];
+
 });
