@@ -22,3 +22,7 @@ app.config(function($routeProvider) {
 		});
 });
 
+app.service("storeVar", function() {
+	this.chosen = "";
+	alert("this is chosen: " + chosen);
+});

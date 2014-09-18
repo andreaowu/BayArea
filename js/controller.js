@@ -1,4 +1,4 @@
-app.controller('PlacesCtrl', function($scope, $routeParams) {
+app.controller('PlacesCtrl', function($scope, 'storeVar') {
 	$scope.cities = 
 		{"Fremont": ["food", "hiking"],
 			"San Jose": ["food", "hiking"], 
@@ -20,6 +20,15 @@ app.controller('PlacesCtrl', function($scope, $routeParams) {
 			"description": "This place got me to start eating falafels; it's that good! Get the falafel and banana milk shake. It's great!",
 			"img": "tbd"}
 	];
+
+	$scope.changeChosen = function(changeTo) {
+		storeVar.chosen = changeTo;
+		alert(changeTo);
+	};
+
+	$scope.get = function() {
+		alert(storeVar.chosen + " get is the new view one");
+	};
 
 });
 
