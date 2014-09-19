@@ -21,3 +21,15 @@ app.config(function($routeProvider) {
 			redirectTo : '/'
 		});
 });
+
+app.service('sharedProperties', function() {
+	var chosen = "";
+	return {
+		getProperty: function() {
+			return chosen;
+		},
+		setProperty: function(value) {
+			chosen = value;
+		}
+	}
+});

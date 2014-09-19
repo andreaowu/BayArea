@@ -1,6 +1,4 @@
-app.controller('PlacesCtrl', ['$rootScope', '$scope', function($scope, $rootScope) {
-	$rootScope.chosen = "";
-
+app.controller('PlacesCtrl', function($scope, sharedProperties) {
 	$scope.cities = 
 		{"Fremont": ["food", "hiking"],
 			"San Jose": ["food", "hiking"], 
@@ -24,15 +22,11 @@ app.controller('PlacesCtrl', ['$rootScope', '$scope', function($scope, $rootScop
 	];
 
 	$scope.changeChosen = function(changeTo) {
-		$rootScope.chosen = changeTo;
-		alert(changeTo);
+		sharedProperties.setProperty(changeTo);
 	};
 
 	$scope.get = function() {
-		alert($rootScope.chosen + " get is the new view one");
+		alert(sharedProperties.getProperty() + " get is the new view one");
 	};
 
-}]);
-
-app.controller('ContactCtrl', function($scope) {
 });
