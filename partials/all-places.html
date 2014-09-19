@@ -1,5 +1,6 @@
 <header class="navbar center">
 	<nav>
+		<img src="{{cityPic[loc()]}}" style="max-height:100px;">
 		<ul class="nav" ng-repeat="type in cities[loc()]">
 			<li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
 		</ul>

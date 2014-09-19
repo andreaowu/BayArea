@@ -6,6 +6,13 @@ app.controller('PlacesCtrl', function($scope, sharedProperties) {
 			"San Francisco": ["food", "hiking", "museums", "outdoors"]
 		};
 
+	$scope.cityPic =
+		{"Fremont": "img/chabot.jpg",
+			"San Jose": "",
+			"Berkeley": "",
+			"San Francisco": ""
+		};
+
 	$scope.places = [
 		{"name": "Mission Peak",
 			"city": "Fremont",
