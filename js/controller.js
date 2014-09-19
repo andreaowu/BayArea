@@ -23,10 +23,12 @@ app.controller('PlacesCtrl', function($scope, sharedProperties) {
 
 	$scope.changeChosen = function(changeTo) {
 		sharedProperties.setProperty(changeTo);
+		alert("changeChosen to: " + changeTo);
 	};
 
-	$scope.get = function() {
-		alert(sharedProperties.getProperty() + " get is the new view one");
-	};
+	$scope.loc = sharedProperties.getProperty;
 
+});
+
+app.controller('ContactCtrl', function($scope) {
 });
