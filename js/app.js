@@ -23,7 +23,7 @@ app.config(function($routeProvider) {
 });
 
 app.service('sharedProperties', function() {
-	var chosen = "";
+	var chosen = "sup";
 	return {
 		getProperty: function() {
 			return chosen;
