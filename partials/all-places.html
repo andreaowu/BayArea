@@ -1,6 +1,10 @@
 <div class="navbar center">
-	<img class="crop" src="{{cityPic[loc()]}}">
+	<div class="img">
+		<img src="{{cityPic[loc()]}}">
+	</div>
+	<br>
 	<ul class="nav" ng-repeat="type in cities[loc()]">
 		<li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
 	</ul>
 </div>
+
