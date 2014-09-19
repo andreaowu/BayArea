@@ -30,7 +30,6 @@ app.service('sharedProperties', function() {
 		},
 		setProperty: function(value) {
 			chosen = value;
-			alert(value);
 		}
 	}
 });

@@ -1,3 +1,7 @@
-<div ng-repeat="type in cities[loc()]">
-	{{type}}
-</div>
+<header class="navbar center">
+	<nav>
+		<ul class="nav" ng-repeat="type in cities[loc()]">
+			<li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
+		</ul>
+	</nav>
+</header>

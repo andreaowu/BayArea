@@ -23,7 +23,6 @@ app.controller('PlacesCtrl', function($scope, sharedProperties) {
 
 	$scope.changeChosen = function(changeTo) {
 		sharedProperties.setProperty(changeTo);
-		alert("changeChosen to: " + changeTo);
 	};
 
 	$scope.loc = sharedProperties.getProperty;
