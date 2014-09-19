@@ -20,7 +20,7 @@ h2 {
   }
 }
 
-.center.navbar .nav {
+.center .navbar {
     float:none;
     display:inline-block;
     vertical-align: top;
@@ -35,6 +35,9 @@ h2 {
     margin-top: -80px;
 }
 
-#img {
-	max-height: 300px;
+.crop {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
 }
+
