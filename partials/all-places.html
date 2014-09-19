@@ -6,6 +6,6 @@
 	<ul class="nav" ng-repeat="type in cities[loc()]">
 		<li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
 	</ul>
-	<ul ng-repeat="place in places | filter: {city: loc()}">{{place.name}}</ul>
+	<ul ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">{{place.name}}</ul>
 </div>
 
