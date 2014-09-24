@@ -3,9 +3,10 @@
 		<img src="{{cityPic[loc()]}}">
 	</div>
 	<br>
-	<ul class="nav" ng-repeat="type in cities[loc()]">
-		<li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
-	</ul>
-	<ul ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">{{place.name}}</ul>
+	<ul id="filters" class="nav clearfix" ng-repeat="type in cities[loc()]">
+        <li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
+    </ul>
+
 </div>
+
 
