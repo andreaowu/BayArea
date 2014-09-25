@@ -1,12 +1,38 @@
 <div class="navbar center">
-	<div class="img">
-		<img src="{{cityPic[loc()]}}">
-	</div>
-	<br>
-	<ul id="filters" class="nav clearfix" ng-repeat="type in cities[loc()]">
+    <div class="img">
+        <img src="{{cityPic[loc()]}}">
+    </div>
+    <br>
+
+    <ul id="filters" class="nav clearfix" ng-repeat="type in cities[loc()]">
         <li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
     </ul>
 
+    <div class="container">
+        <div class="row centered" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">
+            <!--Begin Officer Block 1-->
+           <div class="col-lg-4">
+                <div class="box">
+                    <br>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                        <img src="{{name.img}}" class="myimg" alt="">
+                    </a>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                <div class="mybb">
+                                    <h2>{{place.name}}</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p id="narrow">{{place.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
