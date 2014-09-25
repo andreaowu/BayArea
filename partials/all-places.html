@@ -4,19 +4,21 @@
     </div>
     <br>
 
+    <!-- Category names !-->
     <ul id="filters" class="nav clearfix" ng-repeat="type in cities[loc()]">
         <li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
     </ul>
 
+    <!-- Content boxes !-->
     <div class="container">
         <div class="row centered" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">
             {{incr()}}
-            <!--Begin Officer Block 1-->
            <div class="col-lg-4">
                 <div class="box">
                     <br>
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
-                        <img src="{{name.img}}" class="myimg" alt="">
+                        <img src="{{place.pic}}" class="myimg">
+                        {{place.pic}}
                     </a>
                     <div class="accordion-group">
                         <div class="accordion-heading">
