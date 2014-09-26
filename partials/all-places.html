@@ -16,19 +16,18 @@
         <div class="row centered">
             <div class="container">
                 <div class="row centered">
-                    <div class="col-lg-4" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'" style="float:left;width:33%;">
+                    <div class="col-lg-4" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">
                         {{incr()}}
                         <div class="box">
                             <br>
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
                                 <img src="{{place.img}}" class="myimg">
                             </a>
-                            <h2>{{place.name}}</h>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
                                         <div class="mybb">
-                                            <h8>{{place.location}}</h8>
+                                            <h2>{{place.name}}</h>
                                         </div>
                                     </a>
                                 </div>
