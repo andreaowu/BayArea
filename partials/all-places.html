@@ -8,28 +8,35 @@
     <ul id="filters" class="nav clearfix" ng-repeat="type in cities[loc()]">
         <li><a href="#{{loc()}}/{{type}}">{{type}}</a></li>
     </ul>
+</div>
 
-    <!-- Content boxes !-->
+<!-- Content boxes !-->
+<div id="myteam">
     <div class="container">
-        <div class="row centered" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'">
-            {{incr()}}
-           <div class="col-lg-4">
-                <div class="box">
-                    <br>
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
-                        <img src="{{place.img}}" class="myimg">
-                    </a>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
+        <div class="row centered">
+            <div class="container">
+                <div class="row centered">
+                    <div class="col-lg-4" ng-repeat="place in places | filter: {city: loc()} | orderBy: 'type'" style="float:left;width:33%;">
+                        {{incr()}}
+                        <div class="box">
+                            <br>
                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
-                                <div class="mybb">
-                                    <h2>{{place.name}}</h2>
-                                </div>
+                                <img src="{{place.img}}" class="myimg">
                             </a>
-                        </div>
-                        <div id="{{link()}}" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p id="narrow">{{place.description}}</p>
+                            <h2>{{place.name}}</h>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#{{link()}}">
+                                        <div class="mybb">
+                                            <h8>{{place.location}}</h8>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div id="{{link()}}" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <p id="narrow">{{place.description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

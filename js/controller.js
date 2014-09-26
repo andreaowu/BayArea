@@ -98,7 +98,6 @@ app.controller('PlacesCtrl', function($scope, sharedProperties) {
             "type": "food",
             "description": "Berkeley has really good Thai food, and this is one of my favorite places to get it!",
             "img": "tbd"}
-
     ];
 
     $scope.changeChosen = function(changeTo) {
